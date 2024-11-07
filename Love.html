@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Letter</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Background */
+        body {
+            font-family: 'Cursive', Georgia, serif;
+            background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), 
+            url('https://www.transparenttextures.com/patterns/old-wall.png');
+            background-size: cover;
+            background-color: #f9ecec;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Envelope Container */
+        .envelope-container {
+    width: 60%;
+    max-width: 800px;
+    height: 80%; /* Set a fixed height for the container */
+    overflow-y: scroll; /* Enable vertical scrolling */
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+    position: relative;
+    perspective: 1000px;
+    animation: unfold 2s ease-in-out;
+}
+
+.envelope-container::-webkit-scrollbar { 
+    display: none;  /* For Chrome, Safari, and Opera */
+}
+
+        .envelope {
+            background: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            border: 3px solid #f08080;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+        }
+
+        .envelope::before {
+            content: '';
+            position: absolute;
+            top: -25px;
+            left: 0;
+            right: 0;
+            height: 25px;
+            background: #f08080;
+            border-radius: 15px 15px 0 0;
+            transform: rotateX(180deg);
+            transition: transform 0.6s;
+        }
+
+        /* Unfold Animation */
+        @keyframes unfold {
+            0% {
+                transform: scaleY(0);
+            }
+            100% {
+                transform: scaleY(1);
+            }
+        }
+
+        /* Floating Hearts Animation */
+        .floating-hearts {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .heart {
+            position: absolute;
+            bottom: 0;
+            font-size: 20px;
+            color: #ff6f61;
+            animation: float 4s infinite ease-in-out;
+        }
+
+        .heart:nth-child(1) {
+            left: 20%;
+            animation-duration: 5s;
+            font-size: 30px;
+        }
+
+        .heart:nth-child(2) {
+            left: 40%;
+            animation-duration: 6s;
+            font-size: 25px;
+        }
+
+        .heart:nth-child(3) {
+            left: 60%;
+            animation-duration: 7s;
+            font-size: 35px;
+        }
+
+        .heart:nth-child(4) {
+            left: 80%;
+            animation-duration: 8s;
+            font-size: 20px;
+        }
+
+        @keyframes float {
+            0% {
+                bottom: -50px;
+                opacity: 0;
+                transform: translateX(-50%) scale(0);
+            }
+            50% {
+                opacity: 1;
+                transform: translateX(-50%) scale(1.2);
+            }
+            100% {
+                bottom: 100vh;
+                opacity: 0;
+                transform: translateX(-50%) scale(0);
+            }
+        }
+
+        /* Letter Styling */
+        h1 {
+            color: #d9534f;
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 25px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #444;
+            text-indent: 40px;
+            font-family: 'Georgia', serif;
+        }
+
+        .signature {
+            margin-top: 40px;
+            text-align: right;
+            font-size: 22px;
+            font-style: italic;
+            color: #d9534f;
+            font-family: 'Cursive', Georgia, serif;
+        }
+
+        /* El Gato (Cat Image) */
+        .el-gato {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .el-gato img {
+            width: 100px;
+            height: auto;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-hearts">
+        <div class="heart">❤️</div>
+        <div class="heart">❤️</div>
+        <div class="heart">❤️</div>
+        <div class="heart">❤️</div>
+    </div>
+
+    <div class="envelope-container">
+        <div class="envelope">
+            <h1>Happy birthday, My Love</h1>
+            <p>
+                Hello, my love! Happy 18th birthday! Parang kailan lang, no? Di ko talaga alam edad mo, HAHAHAHA. Inang yan, tinatago mo pa sa akin, eh sasabihin mo rin pala. HAHAHA! Crazy ka rin, no? Alam ko namang crush na crush mo ako, kaya mo ako niligawan, HAHAHA! Pero yun nga, happy legal age, my love. Gusto ko ako ang unang babati sa’yo pag 12 a.m ng kaarawan mo.
+
+Pwede ka nang mag-gala, pero dapat kasama ako, kasi magagalit ako pag wala kang kasama :) Alam mo ba na super duper ultra mega MAHAL NA MAHAL KITA, LIKE SUPER LAKI NG PAGMAMAHAL KO SA'YO, AS IN LEGIT! Kaya mag-ingat ka palagi, kasi konting tiis na lang, always na tayong magkikita, ok po ba? Call ka always sa akin pag may need ka o kailangan mo ako; nandito lang ako palagi at hindi ako mawawala, okay? I love you so much, lovey.
+
+Sorry if minsan parang wala akong pake, pero deep inside, gago, masakit. Like gusto ko talaga na ayusin ang mga bagay-bagay, pero yung pride ko tumataas. Kaya ngayon inaayos ko 'yan, kasi ayaw ko na ng ganon. Ayaw kong iwan mo ako :( Malulungkot ako ulit pag nawala ka sa akin. Alam mo naman ang sitwasyon ko dito sa tatay ko, pero tinitiis ko naman. Bawal mag-give up, diba?! Kaya walang mag-give up sa ating dalawa, okay? Kasi tayong dalawa ang mag-build ng future natin.
+
+Aaaaa, can’t wait, lovey, na makasama ka sa iisang bahay! Tapos lagi tayong bonding after ng work natin, diba?! Hehehe, I miss you na, love. Sana magkita tayo bago ka umalis ulit dito sa Maynila. I love you, at mag-ingat kayo pag-uwi niyo. (Advance)
+
+
+
+
+
+
+
+            </p>
+            
+            <p class="signature">
+                Mwaa💋
+            </p>
+            <div class="el-gato">
+                <img src="https://i.pinimg.com/564x/e8/98/e4/e898e40e72c64fc7c99ea82ae7c6e47d.jpg" alt="El Gato the Cat">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
